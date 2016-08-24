@@ -1,0 +1,67 @@
+##here is my Make A Game assignment
+## I'm not going to make it cut to a list of scenes.
+##SEE exercise43barebones.py for my other start version
+from sys import exit
+
+class World(object):
+    Country = {
+        'UnitedStates': Unitedstates(),
+        'UnitedKingdom': Unitedkingdom(),
+        'Japan': Japan(),
+    }
+    
+    def __init__(self, Country):
+        self.Country = Country
+
+   # def Region(self, Region):
+    #    val = Map.scenes.get(scene_name)
+     #   return val
+
+    #def opening_scene(self):
+     #   return self.next_scene(self.start_scene) 
+
+class Country(World):
+    def enter(self):
+        print "Which country do you want"
+        val = raw_input("> ")
+        if val == 'UnitedS
+        
+        
+        
+class Unitedstates(Country):
+    def enter(self):
+        print "Here we have a country bordered two continental oceans, the Pacific and Atlantic."
+        print "The current population is 315 million people."
+        print "The average age is around 41 years old."
+        print "The current economy supports a large trade deficit."
+        print "The demographic is around 60% american, 20% Hispanic, 13% African-American, and %7 miscelleanous."
+        print "The country is considered developed and first-world."
+        return 'UnitedKingdom'
+    
+class Unitedkingdom(Country):    
+    def enter(self):
+        print """" Here we see a country that recently departed from the European Union, which has been a very controversial decision \nthe past few months. The older generation was known for voting to leave the Union while the younger generation voted to stay.\n When the country first decided to enter the Union, it was the older generation for voted for joining. \n Leaving the Union is known for having the effect of allowing U.K.'s government to change trading, immigrating, and local policies.\n"""
+        print "It is my opinion that seperating from the European Union allows for independence between countries and as a result will be better for the local economy. The public believes the economy will do horribly without the European Union because the European Union will not negotiate good trading deals with the U.K."
+        print "Neo liberalism agenda seems to support the idea of having open borders between all countries and I see that as bad because"
+        print "it lowers the quality of living in more developed countries while raising the quality of living in poorer countries at the"
+        print "same time."
+        return 'Japan'
+class Japan(Country):
+    def enter(self):
+        print "Japan is a developed nation, the average age of a citizen is 42."
+        print "The population is steadily declining and there is no sign of that changing in the near future."
+        print "One of the largest industries in Japan is cars."
+        print "The country has been hit by large tsunamis in the past and they have caused quite a bit of damage"
+        print "There was a recent incident that caused the desctruction of a nuclear power plant."
+        return 'Finished'
+class Finished(Country):
+    def enter(self):
+        print "Its over"
+        
+#class Timezone(Region):
+#class Town(Region):
+#class LawsAndPractices(Region):
+    
+a_World = World('UnitedStates')
+
+

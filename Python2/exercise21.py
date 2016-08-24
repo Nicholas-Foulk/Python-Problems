@@ -1,0 +1,34 @@
+def add(a,b):
+    print "Here we are in the add function, and adding %d and %d " % (a, b)
+    return a+b
+def subtract(a,b):
+    print "Subtracting %d from %d " % (b, a)
+    return a-b
+    
+def mult(a,b):
+    print "Multiplying %d and %d" % (a, b)
+    return a*b
+
+def divide(a, b):
+    print "Dividng %d / %d" % (a,b)
+    return a / b
+    
+print "I'm going to be performing math functions"
+
+age = add(10, 15)
+
+weight = subtract(172, 20)
+
+height = mult(5, 12)
+
+iq = divide(100, 2)
+print "My age is: %d, my weight is: %d, my height is: %d " % (age, weight, height)
+print "Lets define them all into one function"
+
+what = add(age, subtract(height, mult(weight, divide(iq, 2))))
+
+print "That becomes:",what, "Can you do it by hand?"
+
+
+
+     

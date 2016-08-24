@@ -1,0 +1,32 @@
+class Parent(object):
+
+    def override(self):
+        print "PARENT override()"
+
+    def implicit(self):
+        print "PARENT implicit()"
+
+    def altered(self):
+        print "PARENT altered()"
+
+class Child(Parent):
+
+    def override(self):
+        print "CHILD override()"
+
+    def altered(self):
+        print "CHILD, BEFORE PARENT altered()"
+        super(Child, self).altered() #this line goes to the altered version in the Parent class super("class name", self)."methodname"
+        print "CHILD, AFTER PARENT altered()"
+
+dad = Parent()
+son = Child()
+
+dad.implicit() #this should print "PARENT implicit()"
+son.implicit() #this should print "PARENT implicit()"
+
+dad.override() #this should print "PARENT override()"
+son.override() #this should print "CHILD override()"
+
+dad.altered() #this should print "PARENT altered()"
+son.altered() #this should print "CHILD, BEFORE PARENT altered(), PARENT altered(), CHILD, AFTER PARENT altered()"

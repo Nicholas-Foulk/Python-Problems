@@ -1,0 +1,29 @@
+people = 20
+cats = 30
+dogs = 15
+
+if people < cats:
+    print "Too many cats!"
+
+if people > cats:
+    print "Not enough cats."
+    
+if people < dogs:
+    print "There are more dogs than people."
+
+if people > dogs:
+    print "There are more people than dogs."
+    
+dogs += 5
+ 
+if people >= dogs:
+    print "There are a greater or equal number of people to dogs."
+ 
+if people < dogs:
+    print "There are less dogs than the number of people."
+    
+if people <= dogs:
+    print "There are a less or equal number of people to dogs."
+    
+if people == dogs:
+    print "There are the same number of dogs as people."
